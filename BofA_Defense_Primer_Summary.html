@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>A&amp;D Primer — BofA Defense Summary</title>
+<style>
+:root {
+  --bg:#ffffff; --fg:#1a1f29; --muted:#5b6472; --accent:#0b4f8a;
+  --accent2:#11355c; --line:#e2e6ec; --card:#f6f8fb; --chip:#eaf1f8;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#11151b; --fg:#e6e9ee; --muted:#9aa4b2; --accent:#67aef0;
+    --accent2:#9cc6f2; --line:#262d38; --card:#1a1f27; --chip:#1d2a3a; }
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+body {
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:17px; line-height:1.62; letter-spacing:.1px;
+}
+.wrap { max-width:760px; margin:0 auto; padding:20px 18px 80px; }
+header.doc {
+  border-bottom:3px solid var(--accent); padding-bottom:14px; margin-bottom:8px;
+}
+header.doc h1 { font-size:1.55rem; line-height:1.25; margin:.2em 0 .35em; color:var(--accent2); }
+.meta { color:var(--muted); font-size:.92rem; }
+h1 { font-size:1.5rem; }
+h2 {
+  font-size:1.28rem; color:var(--accent2); margin:2.2em 0 .5em;
+  padding-top:.6em; border-top:2px solid var(--line); line-height:1.3;
+}
+h3 { font-size:1.06rem; color:var(--accent); margin:1.5em 0 .35em; }
+p { margin:.55em 0; }
+ul,ol { padding-left:1.25em; margin:.5em 0; }
+li { margin:.32em 0; }
+strong { color:var(--fg); }
+hr { border:none; border-top:1px solid var(--line); margin:1.6em 0; }
+blockquote {
+  margin:1em 0; padding:.7em .95em; background:var(--card);
+  border-left:4px solid var(--accent); border-radius:6px; color:var(--muted); font-size:.96rem;
+}
+blockquote p { margin:.2em 0; }
+code { background:var(--chip); padding:.08em .35em; border-radius:4px; font-size:.9em; }
+em { color:var(--muted); }
+a { color:var(--accent); }
+/* TOC */
+nav.toc {
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:14px 16px; margin:18px 0 6px;
+}
+nav.toc .toc-title { font-weight:700; color:var(--accent2); margin-bottom:.4em; font-size:1rem; }
+nav.toc ul { list-style:none; padding-left:0; margin:.2em 0; }
+nav.toc > ul > li { margin:.15em 0; }
+nav.toc ul ul { padding-left:.9em; border-left:1px solid var(--line); margin:.15em 0 .3em; }
+nav.toc a { text-decoration:none; }
+nav.toc > ul > li > a { font-weight:600; }
+nav.toc ul ul a { color:var(--muted); font-size:.93rem; }
+/* back-to-top */
+#top {
+  position:fixed; right:14px; bottom:16px; background:var(--accent); color:#fff;
+  border-radius:50%; width:46px; height:46px; display:flex; align-items:center;
+  justify-content:center; text-decoration:none; font-size:1.2rem; box-shadow:0 3px 10px rgba(0,0,0,.25);
+  opacity:.92;
+}
+.section-anchor { scroll-margin-top:12px; }
+</style>
+</head>
+<body>
+<div class="wrap" id="topanchor">
+<h1 id="aerospace-defense-a-structured-reading-of-the-bank-of-america-defense-primer">Aerospace &amp; Defense — A Structured Reading of the Bank of America Defense Primer</h1>
+<p><strong>Prepared for:</strong> VP and Principal, Veritas Capital
+<strong>Source document:</strong> Bank of America Global Research, <em>"Defense Update: Deciphering Defense, an Industry Primer"</em> (28 June 2023, 236 pp.)
+<strong>Purpose:</strong> Section-by-section summaries to orient investors new to the A&amp;D space, each structured as Executive Summary → Overview → Revenue Models → Industry Structure → Trends, with added context and a per-section glossary.</p>
+<blockquote>
+<p><strong>A note on vintage.</strong> The BofA primer is dated June 2023; its figures (budgets, market caps, program statuses, ownership stakes) reflect that moment. The structural insights — how the industry makes money, who the players are, what drives the stocks — remain current. Where a number is clearly a 2023 snapshot, treat it as directional rather than live.</p>
+</blockquote>
+<nav class="toc"><div class="toc-title">Contents</div><div class="toc">
+<ul>
+<li><a href="#part-0-a-plain-english-primer-on-aerospace-defense-analysts-own-context">Part 0 — A Plain-English Primer on Aerospace &amp; Defense (analyst's own context)</a></li>
+<li><a href="#part-1-the-history-and-the-participants">Part 1 — The History and the Participants</a><ul>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#revenue-models">Revenue Models</a></li>
+<li><a href="#industry-structure">Industry Structure</a></li>
+<li><a href="#trends">Trends</a></li>
+<li><a href="#glossary">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-2-military-aircraft">Part 2 — Military Aircraft</a><ul>
+<li><a href="#executive-summary_1">Executive Summary</a></li>
+<li><a href="#overview_1">Overview</a></li>
+<li><a href="#revenue-models_1">Revenue Models</a></li>
+<li><a href="#industry-structure_1">Industry Structure</a></li>
+<li><a href="#trends_1">Trends</a></li>
+<li><a href="#key-programs-to-know">Key Programs to Know</a></li>
+<li><a href="#glossary_1">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-3-naval-vessels">Part 3 — Naval Vessels</a><ul>
+<li><a href="#executive-summary_2">Executive Summary</a></li>
+<li><a href="#overview_2">Overview</a></li>
+<li><a href="#revenue-models_2">Revenue Models</a></li>
+<li><a href="#industry-structure_2">Industry Structure</a></li>
+<li><a href="#trends_2">Trends</a></li>
+<li><a href="#key-programs-to-know_1">Key Programs to Know</a></li>
+<li><a href="#glossary_2">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-4-armored-vehicles-missiles-and-artillery">Part 4 — Armored Vehicles, Missiles, and Artillery</a><ul>
+<li><a href="#executive-summary_3">Executive Summary</a></li>
+<li><a href="#overview_3">Overview</a></li>
+<li><a href="#revenue-models_3">Revenue Models</a></li>
+<li><a href="#industry-structure_3">Industry Structure</a></li>
+<li><a href="#trends_3">Trends</a></li>
+<li><a href="#key-programs-to-know_2">Key Programs to Know</a></li>
+<li><a href="#glossary_3">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-5-satellites">Part 5 — Satellites</a><ul>
+<li><a href="#executive-summary_4">Executive Summary</a></li>
+<li><a href="#overview_4">Overview</a></li>
+<li><a href="#revenue-models_4">Revenue Models</a></li>
+<li><a href="#industry-structure_4">Industry Structure</a></li>
+<li><a href="#trends_4">Trends</a></li>
+<li><a href="#glossary_4">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-6-defense-electronics-and-cyber-security">Part 6 — Defense Electronics and Cyber Security</a><ul>
+<li><a href="#executive-summary_5">Executive Summary</a></li>
+<li><a href="#overview_5">Overview</a></li>
+<li><a href="#revenue-models_5">Revenue Models</a></li>
+<li><a href="#industry-structure_5">Industry Structure</a></li>
+<li><a href="#trends_5">Trends</a></li>
+<li><a href="#notable-real-world-examples">Notable Real-World Examples</a></li>
+<li><a href="#glossary_5">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-7-battlefield-communications">Part 7 — Battlefield Communications</a><ul>
+<li><a href="#executive-summary_6">Executive Summary</a></li>
+<li><a href="#overview_6">Overview</a></li>
+<li><a href="#revenue-models_6">Revenue Models</a></li>
+<li><a href="#industry-structure_6">Industry Structure</a></li>
+<li><a href="#trends_6">Trends</a></li>
+<li><a href="#glossary_6">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-8-defense-spending-and-the-budget">Part 8 — Defense Spending and the Budget</a><ul>
+<li><a href="#executive-summary_7">Executive Summary</a></li>
+<li><a href="#overview_7">Overview</a></li>
+<li><a href="#revenue-models-how-the-budget-works">Revenue Models — How the Budget Works</a></li>
+<li><a href="#industry-structure-who-controls-the-money">Industry Structure — Who Controls the Money</a></li>
+<li><a href="#trends_7">Trends</a></li>
+<li><a href="#practical-resources">Practical Resources</a></li>
+<li><a href="#glossary_7">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-9-investing-in-defense">Part 9 — Investing in Defense</a><ul>
+<li><a href="#executive-summary_8">Executive Summary</a></li>
+<li><a href="#overview_8">Overview</a></li>
+<li><a href="#valuation-framework">Valuation Framework</a></li>
+<li><a href="#industry-structure-the-investable-universe">Industry Structure (the investable universe)</a></li>
+<li><a href="#trends_8">Trends</a></li>
+<li><a href="#notable-points">Notable Points</a></li>
+<li><a href="#glossary_8">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#part-10-european-defense">Part 10 — European Defense</a><ul>
+<li><a href="#executive-summary_9">Executive Summary</a></li>
+<li><a href="#overview_9">Overview</a></li>
+<li><a href="#structure-and-funding">Structure and Funding</a></li>
+<li><a href="#industry-structure_7">Industry Structure</a></li>
+<li><a href="#trends_9">Trends</a></li>
+<li><a href="#key-programs-and-figures">Key Programs and Figures</a></li>
+<li><a href="#glossary_9">Glossary</a></li>
+</ul>
+</li>
+<li><a href="#appendix-cross-sector-quick-reference-glossary">Appendix — Cross-Sector Quick-Reference Glossary</a></li>
+</ul>
+</div>
+</nav>
+<hr />
+<h2 id="part-0-a-plain-english-primer-on-aerospace-defense-analysts-own-context">Part 0 — A Plain-English Primer on Aerospace &amp; Defense (analyst's own context)</h2>
+<p>Before stepping into BofA's chapters, here is the mental model I would want a generalist investor to hold.</p>
+<p><strong>What the industry actually is.</strong> "Aerospace and defense" bundles two related but distinct businesses. <em>Commercial aerospace</em> (Boeing/Airbus jetliners, jet engines, aftermarket parts) is a cyclical, consumer-and-airline-driven market. <em>Defense</em> is something else entirely: a business whose dominant customer is a single buyer — the US government — purchasing products that have essentially no civilian market (stealth bombers, ballistic-missile submarines, missile-defense interceptors). This primer is about the defense side. The single most important consequence of the "one customer" structure is that the <strong>US federal budget, not the economy, is the demand curve.</strong> Defense is therefore relatively insulated from recessions but highly exposed to politics and policy.</p>
+<p><strong>How to think about the money.</strong> Defense revenue flows from government appropriations through multi-year contracts. Because big platforms take years to build, there is a long lag between when money is <em>authorized</em> (the leading indicator investors watch) and when it is actually <em>spent</em> (outlays). That lag smooths the industry's results and is why budget shocks — even sequestration — hit company sales on a delay of several years rather than immediately.</p>
+<p><strong>The shape of the industry.</strong> Decades of consolidation left a small club of "primes" — Lockheed Martin, RTX (Raytheon), Northrop Grumman, General Dynamics, Boeing, and L3Harris — who act as lead integrators on major programs, plus a layer of specialized suppliers (engines, electronics, structures, sensors) and a growing layer of services/IT contractors (Booz Allen, Leidos, CACI, Palantir). A defining quirk: the primes simultaneously <strong>compete and supply one another</strong> ("cooperatition") — Lockheed and Northrop fight over fighter programs but partner on the F-35. Barriers to entry are very high (security clearances, capital intensity, specialized know-how, regulatory burden), which protects incumbents' margins.</p>
+<p><strong>What makes it a good or bad investment.</strong> Three ideas recur throughout the primer. First, <em>trade the programs, not the headline budget</em> — a company is a portfolio of discrete programs, and what matters is its top-10 programs and its backlog. Second, <em>contract type determines risk</em> — fixed-price contracts offer higher reward but can produce ugly write-offs when programs run over (percentage-of-completion accounting is the sector's signature earnings risk). Third, <em>cash is the language of valuation</em> — defense is valued on free cash flow, DCF, and EV/EBITDA more than on reported EPS.</p>
+<p><strong>Why it matters now.</strong> After two decades focused on counter-insurgency in Iraq and Afghanistan, the strategic frame has shifted to <strong>Great Power Competition</strong> with China (the "pacing challenge") and Russia (the "acute threat," underscored by Ukraine). That shift is driving bipartisan support for modernization — nuclear-triad recapitalization, hypersonics, space, cyber, AI, missile defense, and a larger Navy — and is the structural tailwind behind the whole sector.</p>
+<p>With that frame in place, the BofA chapters follow.</p>
+<hr />
+<h2 id="part-1-the-history-and-the-participants">Part 1 — The History and the Participants</h2>
+<h3 id="executive-summary">Executive Summary</h3>
+<ul>
+<li><strong>The US government is the demand curve.</strong> The defense sector is unique in that its main customer is the US government, so the trajectory of the US defense budget — itself a reflection of the threat environment and <em>political control</em> — is the single biggest driver of industry outlook. The US spends more on defense than any other nation, the foundation of its superpower status.</li>
+<li><strong>Budget is necessary but not sufficient.</strong> Stock performance also turns on policy changes affecting contractor risk/reward, M&amp;A and restructuring, and the relative attractiveness of defense vs. other sectors. Public-opinion polls are coincident-to-lagging indicators and should be ignored.</li>
+<li><strong>Consolidation created an oligopoly of six $10bn+ primes</strong> (Boeing, General Dynamics, Lockheed Martin, Northrop Grumman, Raytheon, L3Harris), the product of 1990s mega-mergers and a DoD push toward joint-service programs. This blunted the impact of any single program on any single company.</li>
+<li><strong>No radically different business models exist</strong> — there is no "Uber of defense." Competitive advantage is subtle: attracting engineers, disciplined program management, and cost control. Reward comes with risk; some of the sector's worst stock periods came from contract overruns on fixed-price work.</li>
+<li><strong>It is a global industry</strong> dominated by US primes but with serious European competitors (BAE, Airbus, Leonardo, Thales) and state-owned/-aligned players in France, Israel, Russia, China, Japan, and beyond.</li>
+</ul>
+<h3 id="overview">Overview</h3>
+<p>Part 1 establishes the conceptual ground rules ("Ten Premises"), maps the investable universe, and tells the story of how the modern US defense industry took shape. The defense sector emerged as a distinct market in the 1950s as the Cold War intensified. Most defense companies address <em>multiple</em> markets (aircraft, ships, missiles, electronics, space, services), each with its own competitive set, so investors cannot treat any prime as a pure play. As of the primer, Raytheon Technologies (~$121bn market cap) had pulled ahead of Lockheed Martin (~$104bn) as the largest defense company, followed by Boeing, Northrop Grumman, General Dynamics, and L3Harris.</p>
+<p>A crucial framing point: <strong>direct exposure to defense varies enormously.</strong> Boeing, one of the largest defense suppliers, derived only ~43% of 2021 revenue from its Defense, Space &amp; Security segment; the rest is commercial. Conversely, Lockheed Martin (~96% defense) and Huntington Ingalls (~99% defense) are nearly pure plays.</p>
+<h3 id="revenue-models">Revenue Models</h3>
+<p>The chapter foregrounds the economics that recur across the report. Defense customers can let contractors <strong>earn higher returns or accelerate cash</strong> on fixed-price and fixed-price-incentive contracts based on performance — but "there is no free lunch," and overruns have produced some of the sector's worst drawdowns. Most primes blend new-build production, multi-year upgrades and modernization, and aftermarket sustainment. A handful succeed in commercial markets (Boeing jetliners, L3Harris broadcast/microwave, RTX civil avionics, GD's Gulfstream), but the chapter cites Norm Augustine's warning that the "record of defense-industry diversification is unblemished by success" — Lockheed's telecom foray and Grumman's bus/solar-panel ventures destroyed value.</p>
+<h3 id="industry-structure">Industry Structure</h3>
+<p>The modern structure is the residue of waves of consolidation, divestiture, and diversification:</p>
+<ul>
+<li><strong>Deep bloodlines.</strong> Shipbuilders (Newport News, founded 1886; Bath Iron Works; Electric Boat) are over a century old. Aircraft makers trace to aviation pioneers (Boeing 1917; Lockheed/Loughhead brothers 1916; the Convair→General Dynamics and Martin→Martin Marietta→Lockheed Martin lines).</li>
+<li><strong>The fewer, the bigger.</strong> Market maturity plus a DoD drive toward <em>joint-service</em> programs (starting with McNamara in the 1960s, accelerating into the 1990s "J-programs": JDAM, JSF, JLTV, JTRS, JASSM, JAGM) reduced the number of distinct programs and suppliers. The 1990s left six $10bn+ primes.</li>
+<li><strong>Niche absorption.</strong> Specialized electronic-warfare firms that arose in the 1950s–60s (Sanders, Loral, E-Systems) were swept into the primes through 1980s–2010s M&amp;A (e.g., FLIR→Teledyne 2021), justified by the logic that larger firms integrate "black boxes" into complete subsystems.</li>
+<li><strong>Multi-industry exit.</strong> Conglomerates that entered defense in the 1940s–80s (GE, Ford, GM/Hughes, Westinghouse, Texas Instruments, AT&amp;T) sold out in the 1990s to focus on "core" markets — Loral was a major buyer before itself being absorbed.</li>
+<li><strong>Beyond the public names.</strong> Important competitors are private or embedded in multi-industry firms: General Atomics (drones), Honeywell and GE Aviation (engines/electronics), and private-equity owners — including <strong>Veritas Capital</strong> (defense electronics &amp; services) and Carlyle.</li>
+</ul>
+<p>Globally, US firms are the largest, but European primes (BAE, Airbus, Leonardo, Thales, Saab) compete directly, and state-owned/-aligned firms (Naval Group, Nexter, Rafael, IAI, Rosoboronexport, AVIC, Mitsubishi/Kawasaki/IHI) dominate their home markets. US and European firms also partner (Raytheon–Thales radars; Northrop–Airbus alliances).</p>
+<h3 id="trends">Trends</h3>
+<p>The chapter's "Ten Premises" double as the report's investment philosophy: focus on material contract decisions (filter out the daily two pages of DoD contract noise); recognize that thematic "pure plays" have largely disappeared with consolidation; watch M&amp;A and sum-of-the-parts dynamics; and understand that <strong>Congress and the DoD — and the specific individuals within them — shape priorities.</strong> The financial profile of the sector has improved over time (margins, cash generation), though debt-to-capital sits well above historical averages, reflecting M&amp;A-driven balance sheets.</p>
+<h3 id="glossary">Glossary</h3>
+<ul>
+<li><strong>Prime (prime contractor):</strong> the lead company responsible for delivering a whole system to the government; subcontracts portions to suppliers.</li>
+<li><strong>DoD:</strong> US Department of Defense — the industry's dominant customer.</li>
+<li><strong>Cooperatition:</strong> industry shorthand for primes simultaneously competing against and supplying one another.</li>
+<li><strong>Joint program ("J-program"):</strong> a system developed/procured for more than one military service (e.g., JSF = Joint Strike Fighter).</li>
+<li><strong>Sum-of-the-parts (SOTP):</strong> valuing a diversified company by separately valuing each segment.</li>
+<li><strong>Platform:</strong> a major vehicle/vessel (aircraft, ship, satellite, armored vehicle) that carries sensors and weapons.</li>
+<li><strong>Foreign Military Sales (FMS):</strong> government-to-government weapons export program administered by the DoD.</li>
+<li><strong>Sequestration:</strong> automatic across-the-board budget cuts (see Part 8).</li>
+<li><strong>Market capitalization:</strong> total equity value of a company's shares.</li>
+</ul>
+<hr />
+<h2 id="part-2-military-aircraft">Part 2 — Military Aircraft</h2>
+<h3 id="executive-summary_1">Executive Summary</h3>
+<ul>
+<li><strong>The largest platform market.</strong> Military aircraft is likely the single biggest defense platform segment by spending. The FY23 budget requested ~$56.5bn for aircraft modernization/investment, including ~$23.0bn for combat aircraft alone.</li>
+<li><strong>The F-35 is the keystone program</strong> — the DoD's largest acquisition, longest in planned duration (procurement through ~2039), and most internationally embedded (8 partner nations, sales across 40+ US states). It now drives a meaningful share of Lockheed Martin's revenue (~28% of sales by 2020). Full-rate production decisions repeatedly slipped, but unit costs fell toward ~$78mn/jet.</li>
+<li><strong>Replacement and upgrade cycles underpin durable demand.</strong> Because aircraft serve 20–30 years, the upgrade/modernization market (electronics, structures, engines) is as important as new-build. Transport and surveillance aircraft enjoy steady multi-role demand.</li>
+<li><strong>Great Power Competition is reshaping the roadmap</strong> — the B-21 Raider (Northrop, ≥100 aircraft, ~$55bn), NGAD (6th-gen manned fighter + AI "loyal wingman" drones), the T-7A trainer, and KC-46A tanker are the forward programs; legacy types (A-10, older F-22s, F/A-18 line) are winding down.</li>
+<li><strong>Manned-unmanned teaming and UAVs are the structural growth vector.</strong> Unmanned systems funding is rising sharply (RDT&amp;E ~$3.1bn FY23 vs. ~$1.8bn FY21); drones already dominate reconnaissance and are moving into strike and "wingman" roles, a trend accelerated by the Russia-Ukraine war's heavy use of small drones.</li>
+</ul>
+<h3 id="overview_1">Overview</h3>
+<p>A "platform" can be an aircraft, ship, satellite, or armored vehicle; aircraft are typically the costliest and most numerous platform category. The US military aircraft market splits into sub-segments: <strong>prime makers</strong> (Boeing, Lockheed Martin, Northrop Grumman, Textron) who design and build airframes; <strong>structures subcontractors</strong> (Spirit AeroSystems, GKN, Precision Castparts, Hexcel, plus the primes supplying each other — Northrop builds ~40% of the F/A-18 and ~20% of the F-35); and <strong>upgraders</strong> who rebuild metal and install new electronics on aging airframes. Designations follow mission letters (F = fighter, B = bomber, C = cargo, A = attack, T = trainer, F/A = fighter-attack). An advanced tactical fighter costs $50mn–$250mn. The <strong>Berry Amendment</strong> (1941) requires US sourcing for many materials, including specialty metals like titanium.</p>
+<h3 id="revenue-models_1">Revenue Models</h3>
+<p>Three revenue streams coexist: <strong>new-build production</strong> (long runs — the F-35 through ~2039; the C-130 in production since the 1950s), <strong>upgrades/modernization</strong> (radar and avionics refreshes, structural repair — e.g., the F-15EX recapitalizing the F-15C/D fleet, the F-22 modernization program), and <strong>international sales</strong> (often at attractive economics — Saudi F-15s ~$11.4bn + $8.9bn support; Qatar F-15QA $6.2bn; Rafale and Gripen export campaigns). Programs progress through development → Low-Rate Initial Production (LRIP) → Full-Rate Production (FRP), with unit costs declining along the production "learning curve" (F-35 fell ~13% from Lot 11 to Lot 14). The international <strong>offset</strong> model (local production, technology transfer — e.g., Saab/Embraer building 80% of Brazil's Gripen airframe) is increasingly standard.</p>
+<h3 id="industry-structure_1">Industry Structure</h3>
+<ul>
+<li><strong>Fighters:</strong> Lockheed Martin (F-16, F-22, F-35 — the only US 5th-gen lines) vs. Boeing (F-15EX, F/A-18E/F). Internationally, Eurofighter Typhoon (Airbus/BAE/Leonardo consortium), Dassault Rafale (France), and Saab Gripen (Sweden) compete, plus Russian (Su-35/Su-57) and Chinese (J-20) types.</li>
+<li><strong>Bombers:</strong> Northrop Grumman (B-2, B-21 Raider).</li>
+<li><strong>Transport/special-mission:</strong> Lockheed (C-130J), Boeing (C-17 — production ended 2015, KC-46A, P-8, E-3, 707-derived special-mission jets).</li>
+<li><strong>Trainers:</strong> Boeing/Saab (T-7A), Textron/Beechcraft (T-6).</li>
+<li><strong>Drones:</strong> General Atomics (MQ-1/MQ-9/Gray Eagle), Northrop (RQ-4, X-47B), AeroVironment (RQ-11 Raven), Kratos (low-cost Valkyrie/Mako).</li>
+</ul>
+<p>The F-35 illustrates the web: Lockheed (forward fuselage/final assembly, Fort Worth), Northrop (center fuselage), BAE (aft fuselage, UK), Pratt &amp; Whitney (F135 engine), with ~1,800 domestic suppliers across 48 states — a deliberately distributed footprint that hard-wires political support.</p>
+<h3 id="trends_1">Trends</h3>
+<p>Demand rests on replacing Cold War-era fleets; affordability scrutiny on multi-role fighters; productivity gains from all-weather sensors, precision weapons, and networking; and the move into <strong>manned-unmanned teaming</strong>. The <strong>high-low mix</strong> doctrine pairs an expensive air-superiority fighter with a cheaper multi-role jet (historically F-15/F-16; now F-22/F-35, with a 6th-gen "high" coming via NGAD). The <strong>pivot to the Pacific</strong> raises the prospect of contested air superiority against Chinese/Russian 5th-gen jets, sustaining the case for new fighters. <strong>NGAD</strong> (launched 2014, manned fighter + AI loyal-wingman drones, ~$1.7bn FY23 request, ~$3.5bn/yr from 2026) is the marquee future program, with Lockheed, Northrop, and Boeing as likely manned-fighter contenders and Kratos/General Atomics in the uncrewed mix.</p>
+<h3 id="key-programs-to-know">Key Programs to Know</h3>
+<p>F-35 (Lockheed, 5th-gen, ~2,456 US aircraft planned, three variants A/B/C); F-22 Raptor (Lockheed, export-banned, line closed 2012); F-15EX and F/A-18E/F (Boeing); B-21 Raider (Northrop, first flight ~2023, service ~2026–27); KC-46A Pegasus tanker (Boeing, 179 aircraft); T-7A Red Hawk trainer (Boeing/Saab); NGAD (6th-gen); MQ-9 Reaper and MQ-1C Gray Eagle (General Atomics).</p>
+<h3 id="glossary_1">Glossary</h3>
+<ul>
+<li><strong>CTOL / STOVL / CV:</strong> Conventional Take-Off and Landing / Short Take-Off and Vertical Landing / Carrier Variant — the F-35A/B/C respectively.</li>
+<li><strong>5th-generation fighter:</strong> stealth + sensor fusion + supersonic capability in one airframe (F-22, F-35, J-20, Su-57).</li>
+<li><strong>LRIP / FRP:</strong> Low-Rate Initial Production / Full-Rate Production — early vs. full manufacturing phases.</li>
+<li><strong>Nunn-McCurdy breach:</strong> statutory trigger when a program's unit cost overruns 25% (or 50% of original) — forces re-evaluation or cancellation (the F-35 breached in 2010).</li>
+<li><strong>AESA radar:</strong> Active Electronically Scanned Array — agile, jam-resistant radar.</li>
+<li><strong>High-low mix:</strong> doctrine pairing an expensive air-superiority fighter with a cheaper multi-role one.</li>
+<li><strong>NGAD:</strong> Next Generation Air Dominance — USAF 6th-gen "family of systems."</li>
+<li><strong>Loyal wingman:</strong> AI-piloted uncrewed aircraft that flies alongside a manned fighter.</li>
+<li><strong>UAV / UAS:</strong> Unmanned Aerial Vehicle / System (the vehicle vs. the whole system).</li>
+<li><strong>Loitering munition:</strong> a "kamikaze"/"suicide" drone that seeks and destroys a target.</li>
+<li><strong>HALE / MALE:</strong> High- / Medium-Altitude Long-Endurance (drone classes).</li>
+<li><strong>ISR:</strong> Intelligence, Surveillance, and Reconnaissance.</li>
+<li><strong>Offset:</strong> local production/technology-transfer concessions a seller grants a foreign buyer.</li>
+<li><strong>Berry Amendment:</strong> law requiring US sourcing of certain materials for the military.</li>
+<li><strong>IOC:</strong> Initial Operating Capability — when a system is first combat-usable.</li>
+</ul>
+<hr />
+<h2 id="part-3-naval-vessels">Part 3 — Naval Vessels</h2>
+<h3 id="executive-summary_2">Executive Summary</h3>
+<ul>
+<li><strong>Submarines anchor the most durable demand in the fleet.</strong> The Columbia-class SSBN (replacing 14 Ohio-class; first boat ~$15.2bn) and the Virginia-class SSN (built ~two per year) carry congressionally protected, multi-decade backlogs — likely the strongest naval procurement cycle since the Reagan era.</li>
+<li><strong>A near-monopoly structure.</strong> Only ~7 private shipyards remain (vs. 22 in the mid-1950s). General Dynamics (Electric Boat, Bath Iron Works, NASSCO) and Huntington Ingalls (Newport News, Ingalls) dominate; carriers are a sole-source HII Newport News franchise (~$13.3bn per Ford-class hull).</li>
+<li><strong>Fleet-size ambition drives the upside.</strong> The Navy targets a 355-ship fleet (2016 goal) versus ~292–296 deployable today, with newer studies pointing to 321–404 manned ships plus 24–45 large unmanned vessels — a multi-decade procurement runway.</li>
+<li><strong>Multiyear/block-buy contracting locks in visibility.</strong> Congressionally approved multiyear and block-buy deals cut costs ~5–15% and give primes years of revenue certainty (e.g., Virginia-class Blocks III/IV/V).</li>
+<li><strong>China is the strategic driver.</strong> The PLA Navy is now the largest by ship count and targeting ~400 vessels, refocusing US planning from the Middle East to the Indo-Pacific.</li>
+</ul>
+<h3 id="overview_2">Overview</h3>
+<p>Naval vessels are a major platform segment; the US Navy is the world's largest and most modern. Ship types span aircraft carriers (~100,000 tons), amphibious assault ships (LHA/LHD), amphibious transport docks (LPD), cruisers (CG), destroyers (DDG, and the curtailed DDG-1000), frigates (FFG/LCS), fast transports (EPF), and submarines (SSN attack / SSBN ballistic-missile / SSGN guided-missile). FY2023 new-construction (the "SCN" account) totaled ~$24.8bn for 9 ships; the five-year plan (FYDP) ran ~$132.8bn for 51 ships, of which submarines alone were ~$75bn. The fleet is organized into Carrier Strike Groups (a carrier + cruiser + destroyers + attack sub + supply ships, ~60 aircraft per carrier) and Expeditionary Strike Groups (amphibious power projection).</p>
+<h3 id="revenue-models_2">Revenue Models</h3>
+<p>Shipbuilding is the longest-cycle business in defense: carriers are procured every 4–5 years, SSNs two per year for decades, and the DDG-51 has been in continuous production since the mid-1980s. Three revenue layers: <strong>new-build</strong> (very long programs), <strong>mid-life modernization</strong> (notably the carrier <strong>Refueling and Complex Overhaul (RCOH)</strong>, and service-life extensions taking Arleigh Burkes to 45 years), and <strong>outsourced maintenance/overhaul</strong> (increasingly handed to private yards on cost grounds). <strong>Multiyear procurement</strong> (2–5 year single contracts) and <strong>block-buy</strong> (&gt;5 years) require Congressional approval but cut costs ~5–15% by optimizing workforce, facilities, and long-lead component buys.</p>
+<h3 id="industry-structure_2">Industry Structure</h3>
+<p>A two-prime structure plus niche yards:</p>
+<ul>
+<li><strong>General Dynamics</strong> — Electric Boat (Columbia SSBN, Virginia SSN), Bath Iron Works (DDG-51, DDG-1000), NASSCO (auxiliaries).</li>
+<li><strong>Huntington Ingalls (HII)</strong> — Newport News (the <em>only</em> carrier yard; nuclear subs), Ingalls (DDG-51, amphibious ships).</li>
+<li><strong>Niche</strong> — Fincantieri Marinette (LCS Freedom-class, Constellation-class frigate), Austal USA (LCS Independence-class, EPF).</li>
+</ul>
+<p>Work is split on the biggest programs: Virginia-class ~50/50 Electric Boat / Newport News; Columbia-class ~72% Electric Boat / 28% Newport News. The collapse from 22 to ~7 private yards reflects boom-bust procurement and joint-service consolidation — a formidable barrier to entry.</p>
+<h3 id="trends_2">Trends</h3>
+<p>Demand is driven by an aging fleet, the China challenge (PLAN now largest by count), and missile threats from Iran/North Korea, plus the Indo-Pacific pivot. The fleet architecture is shifting toward a <em>smaller</em> share of large ships, more small combatants, and a new category of <strong>large unmanned vessels (24–45)</strong>. Programs ramping: Columbia SSBN (serial production ~FY26, service ~2031), Virginia SSN, Constellation-class FFG (Fincantieri, 10 hulls, IOC ~2030), and Ford-class carriers. Programs cut/sunsetting: the Zumwalt DDG-1000 (slashed from 32 planned to just 3) and the Oliver Hazard Perry frigates (all retired 2015). A legal floor mandates <strong>no fewer than 11 aircraft carriers.</strong></p>
+<h3 id="key-programs-to-know_1">Key Programs to Know</h3>
+<p>Carriers: Gerald R. Ford-class CVN-78 (~$13.3bn; CVN-79 Kennedy, CVN-80 Enterprise, CVN-81 Doris Miller) — all HII Newport News. SSBN: Columbia-class (12 planned, replacing Ohio-class; ~$5.9bn FY23). SSN: Virginia-class (~$2.6bn/boat, two per year). Destroyers: Arleigh Burke DDG-51 (~$2bn, GD Bath + HII Ingalls; FY23–27 multiyear) and Zumwalt DDG-1000 (only 3 built). Amphibious: America-class LHA, San Antonio-class LPD-17. Small combatants: LCS (both variants) and Constellation-class FFG.</p>
+<h3 id="glossary_2">Glossary</h3>
+<ul>
+<li><strong>SSN / SSBN / SSGN:</strong> nuclear-powered attack submarine / ballistic-missile (strategic deterrent) submarine / guided-missile submarine (Tomahawk-armed Ohio conversions).</li>
+<li><strong>CVN / CV:</strong> nuclear-powered aircraft carrier / conventionally powered carrier.</li>
+<li><strong>DDG / CG / FFG:</strong> guided-missile destroyer / cruiser / frigate.</li>
+<li><strong>LCS:</strong> Littoral Combat Ship (two variants — Freedom and Independence).</li>
+<li><strong>LHA / LHD / LPD / LSD:</strong> amphibious assault ship (general purpose / multi-purpose) / amphibious transport dock / dock landing ship.</li>
+<li><strong>RCOH:</strong> Refueling and Complex Overhaul — a carrier's nuclear-refueling mid-life overhaul.</li>
+<li><strong>CSG / ESG / ARG / MEU:</strong> Carrier Strike Group / Expeditionary Strike Group / Amphibious Readiness Group / Marine Expeditionary Unit.</li>
+<li><strong>SCN:</strong> Shipbuilding and Conversion, Navy — the new-construction budget account.</li>
+<li><strong>FYDP:</strong> Future Years Defense Program — the rolling five-year DoD plan.</li>
+<li><strong>PLAN:</strong> People's Liberation Army Navy (China).</li>
+<li><strong>HII / GD / EB / NASSCO:</strong> Huntington Ingalls / General Dynamics / Electric Boat / National Steel and Shipbuilding Co.</li>
+<li><strong>FSA:</strong> Force Structure Assessment — the Navy's periodic fleet-size requirement study.</li>
+<li><strong>Trident II D5:</strong> the submarine-launched ballistic missile carried by SSBNs.</li>
+</ul>
+<hr />
+<h2 id="part-4-armored-vehicles-missiles-and-artillery">Part 4 — Armored Vehicles, Missiles, and Artillery</h2>
+<h3 id="executive-summary_3">Executive Summary</h3>
+<ul>
+<li><strong>Heavy armor is an upgrade franchise, not a new-platform market.</strong> The M1 Abrams (GD Land Systems) has no clean-sheet replacement; it rides a perpetual SEP V2/V3/V4 modernization escalator running past 2050 — sticky, recurring revenue for GD and engine supplier Honeywell.</li>
+<li><strong>The US has a poor record fielding next-gen ground vehicles.</strong> Future Combat System (~$159bn) was cancelled in 2009, Ground Combat Vehicle was killed, and the OMFV has restarted repeatedly — execution and cost-overrun risk dominate, while incumbents (BAE, GD, Oshkosh) win the upgrade and replacement work.</li>
+<li><strong>Precision-guided munitions are the structural growth story.</strong> PGM share of ordnance rose from ~30% (Kosovo) to &gt;66% (Iraqi Freedom). Missiles are <em>consumables</em> — heavy expenditure (&gt;10,000 Hellfires used in Iraq/Afghanistan at ~$50k each) drives recurring restock demand, now amplified by Ukraine (HIMARS/GMLRS).</li>
+<li><strong>The nuclear triad and missile defense are being reinvigorated.</strong> Northrop won the ~$13.3bn GBSD/Sentinel prime contract (Sept 2020) to replace Minuteman III; RTX and Lockheed dominate the interceptor/missile stack (Patriot, THAAD, SM-3/6, Aegis, Tomahawk, JASSM, Javelin).</li>
+<li><strong>Replacement programs concentrate demand on a few primes.</strong> Oshkosh (JLTV replacing ~160,000 Humvees), BAE (ACV replacing AAV; AMPV replacing M113), and Lockheed (JAGM replacing Hellfire; HIMARS) capture the recapitalization wave.</li>
+</ul>
+<h3 id="overview_3">Overview</h3>
+<p>The segment covers tracked and wheeled armored vehicles, self-propelled artillery, missiles, and precision-guided weapons. Key vehicle platforms: M1 Abrams main battle tank, M2/M3 Bradley fighting vehicle, the Stryker family, AMPV, ACV, JLTV (Humvee replacement), HIMARS/M270 rocket artillery, and the M109 Paladin howitzer. China fields the largest tank fleet (~5,400); the US ~2,645. The missile catalog is vast — Patriot, Standard Missile (SM-2/3/6), THAAD, Tomahawk, JASSM, Javelin, GMLRS, Hellfire/JAGM, the submarine-launched Trident II D5, and the GBSD/Sentinel ICBM.</p>
+<h3 id="revenue-models_3">Revenue Models</h3>
+<p>The dominant model is <strong>recapitalization and modernization</strong> of existing fleets rather than clean-sheet production: the M1 Abrams (built 1978–1992) now lives on perpetual System Enhancement Package (SEP) upgrades; the M109 has been rebuilt repeatedly over 40 years. <strong>Sustainment/MRO</strong> (e.g., Honeywell's TIGER engine program; field-fittable retrofit kits like TUSK armor and the Stryker Double-V Hull) is a steady annuity. <strong>Munitions are a consumables business</strong> — recurring restock demand with heavy combat expenditure. Programs advance through Milestone C → LRIP → Full-Rate Production. A potential disruptor: directed-energy weapons at ~$23,000 per shot (or "the price of a gallon of diesel" for a laser) versus $3mn+ for a conventional interceptor.</p>
+<h3 id="industry-structure_3">Industry Structure</h3>
+<ul>
+<li><strong>Ground-vehicle primes:</strong> General Dynamics Land Systems (M1 Abrams, Stryker, LAV), BAE Systems (Bradley, M109 Paladin, AMPV, ACV, M270), Oshkosh (JLTV, tactical trucks), AM General (Humvee).</li>
+<li><strong>Missile/munitions primes:</strong> Lockheed Martin (HIMARS, GMLRS, Javelin [with RTX], JAGM, JASSM, ATACMS, PAC-3, THAAD, Trident II), RTX/Raytheon (Patriot, Standard Missile family, Tomahawk, AMRAAM, Sidewinder, Stinger), Boeing (JDAM, Harpoon, GMD development), Northrop Grumman (GBSD/Sentinel).</li>
+<li><strong>Consolidation/competition:</strong> Abrams ammunition is a near-duopoly (Alliant Techsystems and GD); repeated program failures (FCS, GCV) reinforce incumbency. The OMFV competition narrowed to five teams (Point Blank, Oshkosh, BAE, GD, American Rheinmetall).</li>
+</ul>
+<p>The missile-defense architecture is layered (boost / ascent / midcourse / terminal) with a supplier stack spanning Raytheon (kill vehicles, radars), Boeing (GMD), Lockheed (THAAD, Aegis), and Northrop (battle management).</p>
+<h3 id="trends_3">Trends</h3>
+<p>The Army's six modernization priorities frame demand: long-range precision fires, next-gen combat vehicles, future vertical lift, the network, air-and-missile defense, and soldier lethality. Technology is shifting toward digitalization (a shared battlefield picture), lighter air-transportable vehicles, PGM proliferation, directed-energy/laser weapons, and <strong>hypersonics</strong> (Mach 5+, with the US, China, Russia, and India all having flown vehicles). Geopolitics — Ukraine aid (HIMARS), Iran's and North Korea's missile/nuclear buildups — drives restock and missile-defense demand. Programs ramping: AMPV, ACV, JLTV, JAGM, Abrams SEP V4, GBSD/Sentinel (service ~2029). Programs cancelled/sunset: FCS, GCV, the Crusader and Non-Line-of-Sight Cannon, and US cluster-bomb production (2016); the Marines have divested their tanks entirely.</p>
+<h3 id="key-programs-to-know_2">Key Programs to Know</h3>
+<p>Vehicles: M1 Abrams (GD), M2/M3 Bradley (BAE), Stryker (GD), AMPV (BAE, replaces M113), ACV (BAE, replaces AAV), JLTV (Oshkosh, replaces Humvee). Artillery: M109 Paladin/PIM (BAE), M270 MLRS / HIMARS (Lockheed). Missiles: Patriot/PAC-3 (RTX/Lockheed), THAAD and Aegis (Lockheed), Tomahawk and Standard Missile (RTX), JASSM and Javelin and GMLRS (Lockheed), Trident II D5 (Lockheed), GBSD/Sentinel (Northrop, ~$13.3bn, replaces Minuteman III).</p>
+<h3 id="glossary_3">Glossary</h3>
+<ul>
+<li><strong>MBT / IFV / APC:</strong> Main Battle Tank / Infantry Fighting Vehicle / Armored Personnel Carrier.</li>
+<li><strong>AMPV / ACV / AAV:</strong> Armored Multi-Purpose Vehicle / Amphibious Combat Vehicle / (legacy) Amphibious Assault Vehicle.</li>
+<li><strong>JLTV / HMMWV:</strong> Joint Light Tactical Vehicle / High Mobility Multipurpose Wheeled Vehicle ("Humvee").</li>
+<li><strong>MRAP:</strong> Mine-Resistant Ambush-Protected vehicle (V-hull deflects IED blasts).</li>
+<li><strong>HIMARS / MLRS / GMLRS:</strong> High Mobility Artillery Rocket System / Multiple Launch Rocket System / Guided MLRS.</li>
+<li><strong>SEP:</strong> System Enhancement Package — the Abrams' tiered upgrade program (V1–V4).</li>
+<li><strong>PGM:</strong> Precision-Guided Munition.</li>
+<li><strong>IED / UXO:</strong> Improvised Explosive Device / Unexploded Ordnance.</li>
+<li><strong>SAM:</strong> Surface-to-Air Missile.</li>
+<li><strong>THAAD / PAC-3:</strong> Terminal High Altitude Area Defense / Patriot Advanced Capability-3 — missile interceptors.</li>
+<li><strong>AMRAAM / JASSM / JDAM / JSOW / SDB:</strong> air-to-air missile / air-to-surface standoff missile / direct-attack munition kit / standoff weapon / small-diameter bomb.</li>
+<li><strong>BMD / GMD:</strong> Ballistic Missile Defense / Ground-based Midcourse Defense.</li>
+<li><strong>GBSD / Sentinel:</strong> Ground Based Strategic Deterrent — the new ICBM replacing Minuteman III.</li>
+<li><strong>Nuclear triad:</strong> land (ICBM), air (bomber), and sea (SSBN) legs of nuclear deterrence.</li>
+<li><strong>OMFV / FCS / GCV:</strong> Optionally Manned Fighting Vehicle / Future Combat System / Ground Combat Vehicle (the last two cancelled).</li>
+<li><strong>Directed energy / hypersonics:</strong> laser/microwave weapons / Mach 5+ weapons.</li>
+</ul>
+<hr />
+<h2 id="part-5-satellites">Part 5 — Satellites</h2>
+<h3 id="executive-summary_4">Executive Summary</h3>
+<ul>
+<li><strong>A major but under-the-radar platform</strong> (many programs classified). Military satellites deliver imagery/ISR, GPS, secure communications, missile-launch warning, and weather data, with Boeing, Lockheed Martin, and Northrop Grumman dominating the high-end "exquisite" satellites.</li>
+<li><strong>The launch market has two locked-in DoD providers.</strong> Under NSSL Phase 2, ULA gets ~60% and SpaceX ~40% of national-security launches (Phase 3 expected ~2025). SpaceX's reusable Falcon 9 cut launch costs ~30% — a genuine cost disruptor.</li>
+<li><strong>The DoD is shifting toward commercial imagery.</strong> The May 2022 NRO EOCL award split across Maxar, Planet Labs, and BlackSky ended Maxar's monopoly (Maxar ~$300mn/yr, &gt;$3.2bn potential).</li>
+<li><strong>New-space entrants are scaling via SPACs and large contracts</strong> (Terran Orbital, Planet Labs, BlackSky, Spire, Rocket Lab) — e.g., Terran's $2.4bn / ~300-satellite Rivada deal and SDA Tranche 0/1 buses — while primes pour venture money into space (LM Ventures doubling to $400mn).</li>
+<li><strong>Threats are rising.</strong> Only four countries have demonstrated anti-satellite capability (Russia, US, China, India), and satellites face growing cyber/electronic-warfare vulnerability; AI-enabled image processing is reshaping the data layer.</li>
+</ul>
+<h3 id="overview_4">Overview</h3>
+<p>Military satellites perform six functions: situational awareness/intelligence (imagery, radar, signals), GPS positioning, secure communications, missile-launch warning, weather, and imagery dissemination. Constellations map to primes: Boeing (WGS comms, SBSS surveillance), Lockheed Martin (AEHF, MUOS, GPS Block III, SBIRS missile-warning, GOES weather), Northrop Grumman (DSP missile warning, STSS). In August 2022 the <strong>US Space Force</strong> took control of all DoD satellite-communications missions for the first time. The industry splits into a <strong>launch</strong> vertical and a <strong>payload/satellite + ground-infrastructure</strong> vertical.</p>
+<h3 id="revenue-models_4">Revenue Models</h3>
+<p><strong>Launch</strong> historically depended on government-subsidized infrastructure; <strong>reusability</strong> (Falcon 9; Blue Origin's New Glenn) is the cost-reduction strategy. DoD launch is contracted via NSSL (ULA 60% / SpaceX 40%). <strong>Satellite hardware</strong> is sold in large multi-year awards (e.g., SDA Transport Layer Tranche 0 = $187.5mn to Lockheed for 10 satellites). <strong>Commercial imagery</strong> is increasingly a subscription/"space-as-a-service" model — Planet Labs and Spire sell data access; the NRO's EOCL pays per-year service fees. A recurring theme is "<strong>quality over quantity</strong>": large, expensive GEO "exquisite" satellites for high-end tasking versus cheap, mass-produced LEO commercial sensors.</p>
+<h3 id="industry-structure_4">Industry Structure</h3>
+<p>Exquisite military-grade satellites come from Boeing, Northrop, and Lockheed (high barriers, classified, expensive). Launch providers: <strong>ULA</strong> (a 50/50 Lockheed/Boeing JV; Atlas V, Delta IV, the new Vulcan Centaur), <strong>SpaceX</strong> (Falcon 9/Heavy), Northrop (Minotaur/Antares), <strong>Blue Origin</strong> (New Glenn), and <strong>Rocket Lab</strong> (Electron/Neutron). Commercial imagery consolidated into <strong>Maxar</strong> (which agreed to a ~$6.4bn take-private by Advent in Dec 2022), with EOCL breaking its monopoly. New-space players (Terran Orbital, Planet Labs, BlackSky, Spire) went public via SPACs and now scale through large constellation contracts; the primes run venture arms (LM Ventures, RTX Ventures, etc.) to tap them.</p>
+<h3 id="trends_4">Trends</h3>
+<p>Four key trends: (1) the DoD relying more on <strong>commercial</strong> satellites for data and imagery; (2) intelligence/surveillance needs expanding sharply; (3) <strong>reusable launch</strong> becoming essential to cut costs; and (4) rising <strong>signal security</strong> concerns as satellite hacking increases and anti-satellite and AI capabilities proliferate. The Russia-Ukraine war showcased the value of combined military + commercial space (Palantir-fused targeting, Starlink-linked drones). The <strong>SDA's</strong> low-latency LEO mesh (Transport Layer) and Next-Gen OPIR (replacing SBIRS) are the ramping programs; DSP, SBIRS-Low/STSS, and the Delta II launcher are sunsetting.</p>
+<h3 id="glossary_4">Glossary</h3>
+<ul>
+<li><strong>GEO / MEO / LEO:</strong> Geostationary / Medium / Low Earth Orbit — high-and-expensive vs. low-and-cheap.</li>
+<li><strong>USSF:</strong> US Space Force — now controls all DoD satellite communications.</li>
+<li><strong>NSSL:</strong> National Security Space Launch — the DoD program buying heavy/medium-lift launch (formerly EELV).</li>
+<li><strong>NRO / NGA / NSA:</strong> National Reconnaissance Office (builds spy satellites) / National Geospatial-Intelligence Agency / National Security Agency.</li>
+<li><strong>SBIRS / DSP / OPIR:</strong> Space-Based Infrared System / Defense Support Program / Overhead Persistent Infrared — missile-warning constellations (OPIR is the successor).</li>
+<li><strong>WGS / AEHF / MUOS / MILSTAR:</strong> military satellite-communications constellations.</li>
+<li><strong>GPS Block III:</strong> the latest series of positioning satellites.</li>
+<li><strong>SDA / NDSA:</strong> Space Development Agency / National Defense Space Architecture — the LEO constellation framework.</li>
+<li><strong>EOCL:</strong> Electro-Optical Commercial Layer — the NRO's commercial-imagery purchasing vehicle.</li>
+<li><strong>SAR:</strong> Synthetic Aperture Radar imaging.</li>
+<li><strong>SPAC:</strong> Special Purpose Acquisition Company — the vehicle many new-space firms used to list.</li>
+<li><strong>Exquisite satellite:</strong> a large, sophisticated, costly high-orbit satellite vs. cheap commercial LEO sensors.</li>
+<li><strong>Anti-sat (ASAT):</strong> an anti-satellite weapon.</li>
+<li><strong>ULA:</strong> United Launch Alliance — the Lockheed/Boeing launch JV.</li>
+</ul>
+<hr />
+<h2 id="part-6-defense-electronics-and-cyber-security">Part 6 — Defense Electronics and Cyber Security</h2>
+<h3 id="executive-summary_5">Executive Summary</h3>
+<ul>
+<li><strong>"Electronics" is an all-encompassing category</strong> (sensors, EW, comms, software, processors, components) — and BofA cautions that being "in electronics" does <em>not</em> by itself justify a higher growth multiple. RTX, Northrop, and Curtiss-Wright lead radar/electro-optic sensors.</li>
+<li><strong>Electronic warfare is a rising priority.</strong> A 2018 commission warned the US is losing its EW edge versus peer threats; leaders include Boeing (RC-135 Rivet Joint, EA-18G Growler), Northrop, Lockheed, RTX, and L3Harris.</li>
+<li><strong>Directed-energy weapons are a flagged growth area</strong> — every service is building its own (Raytheon's HELWS laser has logged 400+ kills and 25,000+ combat hours).</li>
+<li><strong>Microelectronics is a strategic vulnerability.</strong> US share of semiconductor manufacturing fell from ~38% (1990) to ~12% (2020), heading below 10%; Taiwan supplies ~40% of logic chips. The CHIPS Act commits $280bn ($52.7bn for semiconductors, $2bn to DoD), and US-China decoupling is accelerating (F-35 deliveries paused in 2022 over a Chinese-sourced magnet alloy).</li>
+<li><strong>Cyber is the "fifth dimension" of warfare and a growth area.</strong> The FY2024 request sought +8% for science/tech and +13% for civilian-agency IT/cyber; the key exposure sits with services firms (Booz Allen, CACI, Leidos, ManTech, Palantir).</li>
+</ul>
+<h3 id="overview_5">Overview</h3>
+<p>Defense electronics breaks into sub-segments: <strong>sensors</strong> (radar, thermal — RTX, Northrop, Curtiss-Wright); <strong>electronic warfare &amp; intelligence</strong> (jamming, spoofing, SIGINT — Boeing, Northrop, Lockheed, RTX, L3Harris); <strong>communications</strong> (satellites, tactical radios, fiber — RTX, L3Harris); <strong>software</strong> (embedded in weapons; systems integration); <strong>processors</strong> (ruggedized/aircraft computers — RTX, GD); and <strong>specialized components</strong> (microwave parts, traveling-wave tubes, radiation-hardened space parts). Electronics can be offensive, defensive, or both. <strong>Cyberspace</strong> is treated as an extension of defense electronics — the fifth warfare dimension after land, sea, air, and space.</p>
+<h3 id="revenue-models_5">Revenue Models</h3>
+<p>Communications programs are large multi-year procurements (e.g., the WIN-T network and HMS tactical radios). Software/IT generates recurring sustainment work given long legacy-system lifecycles. Specialized-component suppliers (e.g., Mercury Systems, citing a ~$24bn addressable Tier-2 market) ride the primes' <strong>outsourcing</strong> trend. Directed-energy and EW span R&amp;D, production, and sustainment (much classified). In <strong>cyber</strong>, the government buys commercial hardware/software (Cisco, Juniper, Check Point) and defense firms integrate it and add three lines — vulnerability assessment, system development (plugging COTS holes), and customized proprietary tools (insider monitoring, forensics, attribution); services firms hold concentrated, recurring government contracts.</p>
+<h3 id="industry-structure_5">Industry Structure</h3>
+<p>Sensors are led by RTX, Northrop, and Curtiss-Wright. EW/SIGINT platforms center on Boeing (RC-135, EA-18G Growler with Northrop as integrator and Raytheon's AESA radar). Comms is led by RTX, L3Harris, and ITT (Rockwell Collins/RTX in airborne radios). The Tier-2 outsourcing trend benefits suppliers like Mercury Systems. In cyber, the primes (Boeing, Lockheed, Northrop, RTX) have built dedicated units organically and via M&A; services firms (Leidos, Booz Allen, CACI, ManTech) hold the exposure, and there are essentially <strong>no publicly traded pure-play cyber firms</strong> left after KeyW was acquired by Jacobs in 2019.</p>
+<h3 id="trends_5">Trends</h3>
+<p>EW is rising against peer and non-state actors; directed energy is a growth area (counter-drone first, then cruise missiles and hypersonics). The Russia-Ukraine war demonstrated cheap-drone proliferation. <strong>US-China decoupling</strong> of the electronics and rare-earth supply chains is a defining theme, alongside the microelectronics manufacturing challenge and the <strong>CHIPS and Science Act</strong> ($280bn). Other shifts: COTS adoption, open/networked architectures, fiber replacing microwave links, and <strong>GaN replacing GaAs</strong> semiconductors for higher power. Cyber growth is propelled by rising DoD/IC funding, non-state-actor threats, AI-driven attack complexity, and 5G/Huawei security concerns.</p>
+<h3 id="notable-real-world-examples">Notable Real-World Examples</h3>
+<p>The 2008 Israel-Syria raid (attributed to NCCT network-sensor and Senior Suter radar-hijack systems); the 2010 <strong>Stuxnet</strong> worm that destroyed Iranian centrifuges (the first major critical-infrastructure cyber weapon); and the <strong>SolarWinds</strong> supply-chain breach (Russian SVR, ~18,000 customers compromised). The US treats destruction of national assets by cyber-attack as an act of war.</p>
+<h3 id="glossary_5">Glossary</h3>
+<ul>
+<li><strong>EW / SIGINT:</strong> Electronic Warfare / Signals Intelligence.</li>
+<li><strong>AESA radar:</strong> Active Electronically Scanned Array — agile, jam-resistant radar.</li>
+<li><strong>C4ISR / C5ISR:</strong> Command, Control, Communications, Computers (Cyber,) Intelligence, Surveillance &amp; Reconnaissance.</li>
+<li><strong>COTS:</strong> Commercial Off-The-Shelf — buying commercial hardware/software for military use.</li>
+<li><strong>IR&amp;D:</strong> Independent Research &amp; Development — contractor-funded R&amp;D.</li>
+<li><strong>DE / HEL / HPM:</strong> Directed Energy / High-Energy Laser / High-Powered Microwave weapons.</li>
+<li><strong>C-UAS:</strong> Counter-Unmanned Aerial System.</li>
+<li><strong>A2/AD:</strong> Anti-Access/Area Denial.</li>
+<li><strong>GaAs / GaN:</strong> Gallium Arsenide / Gallium Nitride semiconductors (GaN handles higher power).</li>
+<li><strong>Jamming / spoofing:</strong> disrupting / impersonating signals.</li>
+<li><strong>Malware / DoS / DDoS / phishing:</strong> common cyber-attack types.</li>
+<li><strong>Zero trust:</strong> a "never trust, always verify" cyber-security model.</li>
+<li><strong>Stuxnet:</strong> the cyber worm that destroyed Iranian nuclear centrifuges.</li>
+<li><strong>CHIPS Act:</strong> 2022 US law funding domestic semiconductor manufacturing and R&amp;D.</li>
+<li><strong>DFARS:</strong> Defense Federal Acquisition Regulation Supplement (includes specialty-metal sourcing rules).</li>
+<li><strong>IC:</strong> Intelligence Community.</li>
+</ul>
+<hr />
+<h2 id="part-7-battlefield-communications">Part 7 — Battlefield Communications</h2>
+<h3 id="executive-summary_6">Executive Summary</h3>
+<ul>
+<li><strong>Comms is part of the defense-electronics umbrella</strong> (C2 through C6), governed by a tension between <strong>security and low latency</strong> — and security usually wins given the sensitivity of DoD traffic.</li>
+<li><strong>JADC2 is the marquee modernization concept</strong> — connecting all service networks into one cloud-like environment — but it remains conceptual, with affordability and tech-maturation risk. <strong>ABMS</strong> is the first real deployment vehicle, backed by a five-company consortium (L3Harris, Northrop, Leidos, Raytheon, SAIC).</li>
+<li><strong>NC3 (nuclear command, control &amp; communications) is the DoD's #1 priority.</strong> The FY2024 budget put ~$34.4bn toward triad recapitalization; most nuclear delivery systems date to the 1980s and hit end-of-life in 2025–2035.</li>
+<li><strong>Space-based comms is a high-growth tailwind</strong> (SATCOM, OPIR, PNT, laser/photonics); laser/free-space-optical communications is an emerging hot area (CACI bought SA Photonics in Dec 2021).</li>
+<li><strong>Legacy airborne C2 platforms are retiring.</strong> The E-8C JSTARS and E-3 AWACS are aging out; Boeing's <strong>E-7 Wedgetail</strong> won the AWACS replacement ($1.2bn for the first two jets, Feb 2023). Defense IT-services firms (Booz Allen, CACI, KBR, Leidos, Palantir, Parsons) are a growing layer in the stack.</li>
+</ul>
+<h3 id="overview_6">Overview</h3>
+<p>Communications equipment relays information among forces via a network of equipment, personnel, and protocols, with terminology running from C2 (Command &amp; Control) to C6 (adding Computers, Cyber, Combat Systems). The field has evolved from flags and drums to radios, satellites, and now lasers and JADC2. Leading tactical-radio suppliers are RTX, L3Harris, and ITT (Rockwell Collins/RTX in airborne radios). Scale: the FY2024 budget put $276bn toward modernization/investment (including RDT&amp;E) and $34.4bn toward the nuclear triad and NC3.</p>
+<h3 id="revenue-models_6">Revenue Models</h3>
+<p>Revenue comes from <strong>radio procurement</strong> (the HMS program — Rifleman, Manpack, and Small Form Factor radios — bought by GD, L3Harris, and Thales), a rising <strong>R&amp;D ramp</strong> (especially laser/photonics as adversaries improve jamming), <strong>space-comms constellations + ground stations</strong> (DSCS, WGS), long-cycle <strong>modernization/recap</strong> programs (NC3 is a ~20-year investment cycle), and <strong>services/sustainment</strong> (defense-IT firms designing, integrating, and maintaining complex networks and bridging legacy-to-modern gaps). M&amp;A to buy capability is common (CACI/SA Photonics, KBR/Centauri).</p>
+<h3 id="industry-structure_6">Industry Structure</h3>
+<p>Tactical radios: RTX, L3Harris, ITT; HMS primes GD, L3Harris, Thales. NC3/triad-recap programs span the primes: GBSD/Sentinel (Northrop), LRSO (Boeing/Raytheon), Columbia-class (GD/HII), Trident II (Lockheed/Raytheon), B-21 (Northrop), F-35 (Lockheed/Raytheon). The JADC2/ABMS digital-backbone consortium is L3Harris, Northrop, Leidos, Raytheon, and SAIC. Airborne C2: the E-8C JSTARS (Northrop on a Boeing 707) and E-3 AWACS are giving way to Boeing's E-7. Laser/photonics players include CACI (SA Photonics), Teledyne, and the primes. A growing IT-services layer (Booz Allen, CACI, KBR, Leidos, Palantir, Parsons) sits atop the comms stack.</p>
+<h3 id="trends_6">Trends</h3>
+<p>The DoD modernization push aims to maintain an "enduring competitive advantage," with intensive comms RDT&amp;E. <strong>JADC2</strong> is the dominant concept but at-risk on affordability; <strong>ABMS</strong> is its first deployable form (it replaced the cancelled JSTARS-recap competition). The security-vs-latency tension persists. <strong>Space-comms tailwinds</strong> (commercial reliance, expanding ISR, reusable launch, signal security) and <strong>laser/free-space-optical</strong> communications are emerging growth areas. Legacy airborne C2 retirement is driving the E-7 and ABMS transition, and defense-services/IT firms are taking a larger role as comms shifts to satellite and previously siloed systems get connected.</p>
+<h3 id="glossary_6">Glossary</h3>
+<ul>
+<li><strong>C2 → C6:</strong> Command &amp; Control, extending to Command, Control, Communications, Computers, Cyber, Combat Systems.</li>
+<li><strong>JADC2:</strong> Joint All-Domain Command &amp; Control — the effort to connect all service networks into one cloud-like network.</li>
+<li><strong>ABMS:</strong> Advanced Battle Management System — the Air/Space Force digital backbone; the first real JADC2 deployment.</li>
+<li><strong>NC3:</strong> Nuclear Command, Control, and Communications.</li>
+<li><strong>GBSD / Sentinel / LRSO:</strong> new ICBM / its name / Long-Range Stand-Off nuclear cruise missile.</li>
+<li><strong>HMS:</strong> Handheld, Manpack, and Small Form Fit radio program.</li>
+<li><strong>SATCOM / DSCS / WGS:</strong> Satellite Communications / Defense Satellite Communication System / Wideband Global SATCOM.</li>
+<li><strong>OPIR / PNT / GPS:</strong> Overhead Persistent Infrared / Position, Navigation &amp; Timing / Global Positioning System.</li>
+<li><strong>FSO / OISL:</strong> Free-Space Optical communications / Optical Inter-Satellite Links.</li>
+<li><strong>JSTARS / AWACS / BACN:</strong> ground-surveillance (E-8C) / airborne early-warning (E-3) / communications-relay (E-11A) aircraft.</li>
+<li><strong>RDT&amp;E:</strong> Research, Development, Test &amp; Evaluation.</li>
+</ul>
+<hr />
+<h2 id="part-8-defense-spending-and-the-budget">Part 8 — Defense Spending and the Budget</h2>
+<h3 id="executive-summary_7">Executive Summary</h3>
+<ul>
+<li><strong>The US has the world's largest defense budget</strong> — roughly 38% of all global defense spending (constant 2021 USD), about one-third of the world total; China is #2 at ~14%.</li>
+<li><strong>BofA is more bullish than the White House.</strong> The FY2024 request was $842bn in discretionary budget authority (+3.2% Y/Y), the 9th straight annual increase; BofA expected total DoD discretionary spending to exceed <strong>$1tn by FY2026</strong> (vs. the White House's $937bn FY2028 projection, which BofA called too low).</li>
+<li><strong>Investors should focus on Procurement and RDT&amp;E.</strong> Procurement maps most directly to industry sales; O&amp;M is the largest category but hard to parse; Military Personnel is people cost. RDT&amp;E's share has been rising.</li>
+<li><strong>Authorizations lead, outlays lag.</strong> Budget authority is a <em>leading</em> indicator of sales; outlays trail by years (often 6–7 for a major ship), which smooths shocks — and is why sequestration's hit to Procurement/RDT&amp;E was delayed several years.</li>
+<li><strong>The budget is a bargaining process.</strong> The most important players on the Hill are the Senate and House Appropriations Defense Subcommittees (Appropriations = the actual money; Authorization = policy). Watch <strong>Continuing Resolutions</strong> (45 enacted FY2010–2022) and the "no new starts" provision, which hurts smaller firms.</li>
+</ul>
+<h3 id="overview_7">Overview</h3>
+<p>The US outspends every nation on defense (~38% of the global total). Over the long run, defense has fallen as a share of GDP and of total federal spending (2000: $294bn, 3% of GDP; 2010: $693bn, 4.7%; the FY2023 NDAA totaled $857.8bn). "National Defense" is budget function <strong>"050"</strong> — the DoD plus parts of the Department of Energy, FEMA, and select activities — running ~$25–30bn above the DoD budget alone (DoD is ~95.8% of it). The fiscal year runs October 1 to September 30.</p>
+<h3 id="revenue-models-how-the-budget-works">Revenue Models — How the Budget Works</h3>
+<p>Three money concepts: <strong>Budget Authority</strong> (legal authority to incur obligations — the headline funding level), <strong>Obligation</strong> (a binding commitment, incurred when DoD signs a contract), and <strong>Outlay</strong> (the actual disbursement, which lags). DoD spending divides into five accounts: <strong>Military Personnel</strong> (pay/benefits), <strong>Operations &amp; Maintenance / O&amp;M</strong> (fuel, training, depot maintenance — the broadest category), <strong>Procurement</strong> (buying finished equipment — most tied to company sales), <strong>RDT&amp;E</strong> (research through development of new weapons), and <strong>Military Construction</strong>. Supplemental funding outside the base budget — historically <strong>OCO</strong> (Overseas Contingency Operations, ~$1.8tn 2001–2019) — funds emergencies and new operations.</p>
+<p>The process runs through <strong>PPBE</strong> (Planning, Programming, Budgeting &amp; Execution): the President sets strategy → DoD builds the FYDP and the services submit <strong>POMs</strong> → OMB negotiates → the President submits the budget (first Monday in February) → Congress holds hearings, passes an <strong>Authorization</strong> bill (policy) and an <strong>Appropriations</strong> bill (money), reconciles House/Senate versions in conference, and the President signs.</p>
+<h3 id="industry-structure-who-controls-the-money">Industry Structure — Who Controls the Money</h3>
+<p>Key players: the <strong>DoD/Office of the Secretary of Defense</strong> (builds the request), the <strong>Joint Chiefs</strong>, <strong>OMB</strong> (White House budget office; also rules on whether sequestration is triggered), the <strong>President</strong>, and <strong>Congress</strong> — where Authorization runs through the Armed Services Committees and Appropriations through the Appropriations Committees and their <strong>Defense Subcommittees</strong> (the most important figures on the Hill). The budget breaks down by service (Army, Navy/Marines, Air Force, Space Force [est. 2019], and "Defense-wide"), with relatively stable shares except during major ground wars, when the Army's share rises.</p>
+<h3 id="trends_7">Trends</h3>
+<p>Demand is set by <strong>Great Power Competition</strong> — China as the "largest pacing challenge," Russia as the "acute threat" (Ukraine) — plus Iran and North Korea; BofA argues rising threats set a <em>floor</em> under spending. Priorities are bipartisan: readiness, nuclear-triad modernization, 5G, US-made microelectronics, space, hypersonics, cyber, missile defense, and AI. The trajectory is upward (FY2024 was the 9th straight increase; BofA forecast &gt;$1tn DoD discretionary by FY2026). <strong>Political control matters</strong> — committee composition and individual members swing program funding for constituent jobs. The <strong>sequestration</strong> episode (Budget Control Act of 2011 → automatic cuts taking effect March 2013, later softened by the 2013/2019 Bipartisan Budget Acts) is the cautionary case study, and <strong>Continuing Resolutions</strong> are now routine.</p>
+<h3 id="practical-resources">Practical Resources</h3>
+<p>BofA recommends the DoD's <em>Program Acquisition Costs by Weapon System</em> document (describes each program, prime contractors, and unit buys) over dissecting the raw P-1/R-1 line-item sheets, which can be incomplete (classified programs leave blanks) and may not map cleanly to company sales. On exports, firms need a State Department license; sales come via <strong>direct commercial sales</strong> (potentially higher margin) or <strong>FMS</strong> (Foreign Military Sales, DoD-administered, lower margin but lower risk).</p>
+<h3 id="glossary_7">Glossary</h3>
+<ul>
+<li><strong>050 / "National Defense":</strong> the budget function covering DoD plus parts of DoE/FEMA — ~$25–30bn above the DoD budget.</li>
+<li><strong>Budget Authority (BA):</strong> legal authority to incur obligations — the headline "funding level" and a leading indicator of sales.</li>
+<li><strong>Obligation / Outlay:</strong> a binding commitment of funds / the actual disbursement (which lags BA).</li>
+<li><strong>Appropriations vs. Authorization:</strong> the bill that provides money vs. the bill that sets policy (non-binding, no funding).</li>
+<li><strong>Topline:</strong> the overall defense funding total/ceiling.</li>
+<li><strong>NDAA:</strong> National Defense Authorization Act — the annual policy bill.</li>
+<li><strong>PBR / PB:</strong> President's Budget Request.</li>
+<li><strong>O&amp;M / Procurement / RDT&amp;E / MilPers / MilCon:</strong> the five DoD budget accounts.</li>
+<li><strong>P-1 / R-1 / O-1 / M-1:</strong> budget justification documents for Procurement / RDT&amp;E / O&amp;M / Personnel.</li>
+<li><strong>OCO:</strong> Overseas Contingency Operations — supplemental wartime spending outside the base budget.</li>
+<li><strong>PPBE:</strong> Planning, Programming, Budgeting &amp; Execution — the DoD's resource-management process.</li>
+<li><strong>FYDP:</strong> Future Years Defense Program — the rolling ~5-year plan (not funded by Congress).</li>
+<li><strong>QDR / NSS:</strong> Quadrennial Defense Review / National Security Strategy.</li>
+<li><strong>POM:</strong> Program Objective Memorandum — a service's multi-year funding-priority proposal.</li>
+<li><strong>OMB:</strong> Office of Management and Budget — the White House budget office.</li>
+<li><strong>CR:</strong> Continuing Resolution — stopgap funding at prior-year rates when appropriations lapse.</li>
+<li><strong>"No new starts":</strong> a CR provision barring funds for programs not funded the prior year.</li>
+<li><strong>BCA / Sequestration:</strong> Budget Control Act of 2011 / the automatic across-the-board cuts it triggered.</li>
+<li><strong>FMS:</strong> Foreign Military Sales — the DoD-administered export program.</li>
+<li><strong>Pacing challenge:</strong> the benchmark threat (China) the US military must keep pace with.</li>
+</ul>
+<hr />
+<h2 id="part-9-investing-in-defense">Part 9 — Investing in Defense</h2>
+<h3 id="executive-summary_8">Executive Summary</h3>
+<ul>
+<li><strong>High barriers protect durable margins.</strong> Concentrated customers (DoD/Congress), products with no commercial market, onerous regulation (CAS, TINA, Berry Amendment), and very long cycles (the C-130 in production since 1953) make both entry and exit difficult.</li>
+<li><strong>Trade the programs, not the budget headline.</strong> Defense stocks do <em>not</em> reliably track the DoD topline. Know each company's top-10 programs and 3–5 year outlook; <strong>backlog — especially funded backlog — is the key leading indicator.</strong></li>
+<li><strong>Valuation is cash-based.</strong> BofA's workhorses are DCF and EV/adjusted EBITDA (the most popular multiple): project ~5 years of free cash flow, assume a growth rate for years 6–10, apply a terminal multiple, and discount at 8–11% (with ~2% terminal growth and ~100% FCF conversion).</li>
+<li><strong>Defense is "defensive."</strong> Primes in the S&amp;P 500 beat the index by an average of 12.8 percentage points across the last five recessions — though 2020 broke the streak (defense −14% vs. S&amp;P +16%).</li>
+<li><strong>Percentage-of-completion accounting is the signature risk.</strong> A troubled program can hit earnings if reserves prove inadequate, alongside program-cancellation, political-surprise, and budget risk. Wars act as "audits" — if equipment fails, money flows fast to fix it.</li>
+</ul>
+<h3 id="overview_8">Overview</h3>
+<p>Part 9 is the investor's playbook: how to analyze and value defense companies, why they differ from other capital-goods, tech, or services firms, what moves the stocks, the main risks, and practical resources. The governing metaphor: a defense company is like a <strong>shopping mall</strong> — a collection of discrete programs/product lines — so investors must drill below sector-level data into individual programs. Context: the US is ~38% of global defense spending, and FY2008–FY2015 budget authority fell 22.7%, a reminder that the topline is cyclical.</p>
+<h3 id="valuation-framework">Valuation Framework</h3>
+<p><strong>How firms earn profit:</strong> mark-ups on costs/assets via the DoD's "Weighted Guidelines" (targets, not guarantees), with <strong>TINA</strong> requiring cost disclosure at negotiation and certain costs non-allowable (interest expense, executive comp above thresholds). General rules of thumb: mature programs (fixed-price) out-earn development programs (cost-plus); export programs often out-earn US programs; sole-source status does <em>not</em> guarantee higher profit.</p>
+<p><strong>Contract types by risk (high to low contractor risk):</strong> Firm-Fixed-Price (FFP), Cost-Reimbursable (CR/cost-plus), and Time-and-Materials (T&amp;M), with acquisition vehicles including IDIQ, GSA Schedules, GWACs, and <strong>OTA</strong> (R&amp;D/prototype contracts exempt from the FAR and not protestable).</p>
+<p><strong>Accounting and cash:</strong> <strong>percentage-of-completion</strong> accounting means reported earnings are estimates of profit accrual, so conservative reserves matter. <strong>CAS 412/413</strong> govern pensions (the government reimburses a portion), and <strong>progress payments</strong> (≈80% large / 95% small business) fund work-in-process — together insulating cash flow.</p>
+<p><strong>Valuation conventions:</strong> relative P/E (good for budget-cycle comparison), FCF (cash from operations less capex), DCF/EVA, cash-flow yield, and <strong>EV/adjusted EBITDA</strong> (the most popular, because M&amp;A-driven goodwill/debt distorts P/E). BofA avoids EV/sales and PEG for defense.</p>
+<p><strong>What moves the stocks:</strong> earnings vs. expectations, cash-flow quality, M&amp;A, management changes, style rotation (growth vs. value), budget expectations, war/conflict ("winds of war," "audits of war"), terrorist attacks, and contract awards (sometimes it is better to own the <em>loser</em>, as the winner may have underbid). The "outbreak of peace" is a classic risk (stocks fell after Gorbachev's 1988 UN speech).</p>
+<h3 id="industry-structure-the-investable-universe">Industry Structure (the investable universe)</h3>
+<p>The covered universe centers on the primes — General Dynamics, Lockheed Martin, Northrop Grumman, RTX, L3Harris, Huntington Ingalls — plus services/IT names (Booz Allen, CACI, Leidos, Parsons); Boeing is often excluded from defense indices because it trades on commercial-aerospace dynamics. Contract mix varies by firm (e.g., GD ~66% fixed / 27% cost-plus / 7% T&amp;M). M&amp;A drives goodwill and leverage (hence the EV/EBITDA preference); the blocked 1998 Lockheed Martin–Northrop Grumman merger marks the regulatory ceiling on prime consolidation.</p>
+<h3 id="trends_8">Trends</h3>
+<p>Long product cycles deliver learning-curve margin gains and "do-or-die" source-selection competitions. <strong>Recapitalization</strong> is a structural theme (the Navy fell from 568 ships at the 1987 Cold War peak to ~297). Bipartisan DoD priorities — nuclear-triad modernization, cyber, AI, 5G, a larger Pacific-facing Navy — frame demand. BofA's <strong>Defense Modernization Model</strong> finds that political control + GDP + military involvement explained ~62% of investment-account budget changes over FY1968–FY2022 (and got the <em>direction</em> right ~85% of years), while public opinion is only a coincident indicator.</p>
+<h3 id="notable-points">Notable Points</h3>
+<p>Quantity surprises cut both ways: the F-16 was planned at 480 and 1,280+ were built, while the B-2 was planned at 132 and only 21 were delivered and the F-22 at 750 but only 187. War-driven re-ratings are dramatic (Force Protection went from ~$0.48 to ~$7.56 as MRAP demand exploded). Talent and security-clearance access (US citizenship required) are real operational risks. Investor resources include <em>Aviation Week</em>, <em>Jane's Defence Weekly</em>, <em>Defense News</em>, <em>The Military Balance</em>, and the Paris/Farnborough air shows.</p>
+<h3 id="glossary_8">Glossary</h3>
+<ul>
+<li><strong>Backlog / funded backlog / book-to-bill:</strong> contracted-but-unrecognized revenue / the fully funded portion (highest quality) / new orders ÷ revenue billed (a growth signal).</li>
+<li><strong>FFP / CR / T&amp;M:</strong> Firm-Fixed-Price / Cost-Reimbursable / Time-and-Materials contracts (descending contractor risk).</li>
+<li><strong>IDIQ / OTA / GWAC:</strong> Indefinite Delivery/Indefinite Quantity / Other Transactions Authority / Government-Wide Acquisition Contract.</li>
+<li><strong>Percentage-of-completion:</strong> recognizing profit as a program progresses, based on estimated total profit.</li>
+<li><strong>CAS / TINA / FAR / DCAA:</strong> Cost Accounting Standards / Truth in Negotiations Act / Federal Acquisition Regulation / Defense Contract Audit Agency.</li>
+<li><strong>Progress payments:</strong> monthly DoD reimbursement of incurred costs on a contract.</li>
+<li><strong>Weighted Guidelines:</strong> the DoD framework for negotiating contractor profit.</li>
+<li><strong>EV/EBITDA / DCF / FCF:</strong> enterprise value ÷ EBITDA / discounted cash flow / free cash flow — the core valuation tools.</li>
+<li><strong>Cash-flow yield:</strong> FCF ÷ market capitalization.</li>
+<li><strong>Nunn-McCurdy breach:</strong> statutory cost-overrun trigger that can force program cancellation.</li>
+<li><strong>Recapitalization:</strong> replacing/modernizing aging equipment.</li>
+<li><strong>DIB:</strong> Defense Industrial Base.</li>
+<li><strong>FOCI:</strong> Foreign Ownership, Control or Influence — the export-control regime governing foreign-owned suppliers.</li>
+</ul>
+<hr />
+<h2 id="part-10-european-defense">Part 10 — European Defense</h2>
+<h3 id="executive-summary_9">Executive Summary</h3>
+<ul>
+<li><strong>Government ownership is the defining difference.</strong> European primes carry persistent (if declining) state stakes and "golden share" vetoes — Airbus ~25.7% (France/Germany/Spain), Leonardo ~30.2% (Italy), Thales ~26.1% (France), Kongsberg 50% (Norway). This shapes governance, M&amp;A, and US-market access in ways US investors must understand.</li>
+<li><strong>BAE Systems is the sector's largest pure defense business</strong> (~€26.5bn FY22 defense revenue), ahead of Leonardo (~€15.2bn) and Airbus's combined defense units (~€12.2bn). BAE is UK-domiciled but earns ~44% of sales in the US.</li>
+<li><strong>Winning US work requires firewalled US subsidiaries.</strong> Under FOCI rules and Special Security Agreements, European firms must keep home-government ownership ≤30% and cannot transfer US-developed technology back to the parent (e.g., BAE's MRAP).</li>
+<li><strong>Ukraine and NATO's 2% target are powering a structural upcycle.</strong> Germany's €100bn special fund, France's ~€413bn FY24–30 programming law, the UK targeting 2.25% of GDP by 2025, and Italy aiming for 2% by 2028. (For scale, SIPRI put FY22 world spending at ~$2,240bn, the US at ~$877bn / 38%.)</li>
+<li><strong>Two rival next-gen fighter programs may need to merge.</strong> FCAS (France/Germany/Spain, ISD ~2040) and Tempest/GCAP (UK/Italy/Japan, ISD ~2035) both carry enormous R&amp;D burdens for a fragmented continent.</li>
+</ul>
+<h3 id="overview_9">Overview</h3>
+<p>Part 10 explains why European defense stocks differ from US peers (government ownership, golden shares), how European firms compete for US and export contracts, the major players, the key collaborative programs, and national budget trajectories. The industry is consolidated into one or two <strong>national champions</strong> per country — BAE (UK), Saab (Sweden), Leonardo (Italy) — with France the exception (Thales, Dassault, Nexter, Airbus, Safran) and Germany hosting several mid-caps (Rheinmetall, MTU, Krauss-Maffei, Thyssenkrupp).</p>
+<h3 id="structure-and-funding">Structure and Funding</h3>
+<p><strong>Government control</strong> operates through golden shares (exclusive vetoes — the UK holds them for BAE and Rolls-Royce) and significant shareholdings. <strong>US-market access</strong> requires keeping home-government ownership ≤30%, establishing US subsidiaries with independent US boards under a Special Security Agreement, and firewalling sensitive technology; almost all such subsidiaries cluster in Virginia near Washington. <strong>Funding</strong> flows through national budgets, the NATO 2%-of-GDP guideline, multi-year military-programming laws (France), and special funds (Germany's €100bn). Equipment spending as a share of total defense is a closely watched NATO metric — and one where Europe lags the US.</p>
+<h3 id="industry-structure_7">Industry Structure</h3>
+<p>National champions and primes: BAE Systems (UK), Airbus Group (FR/DE/ES, listed in the Netherlands), Leonardo (Italy), Thales and Dassault (France), Saab (Sweden), Rheinmetall and HENSOLDT (Germany), Kongsberg (Norway), plus Rolls-Royce, Safran, and MTU. Major <strong>joint ventures</strong> are how Europe shares cost and risk: Eurofighter GmbH (Airbus/BAE/Leonardo), <strong>MBDA</strong> missiles (BAE/Airbus/Leonardo), Eurojet (the EJ200 engine), and KNDS (Nexter + KMW, land systems). M&amp;A history includes Leonardo's purchase of DRS (US), Thales's acquisition of Gemalto, and the politically <strong>blocked 2012 BAE/EADS merger</strong>.</p>
+<h3 id="trends_9">Trends</h3>
+<p>Post-COVID budgets emerged stronger, not weaker, with Russia/Ukraine the key driver — though Europe consistently lags the US on equipment-spend share. Spending is pivoting toward modernization (cyber, digital, space, air), even as Ukraine revives land/ammunition demand (a tailwind for Rheinmetall). <strong>NATO 2% pressure</strong> continues (Germany, Italy, and Spain were projected to miss the 2024 target). The next-gen consolidation theme — a possible FCAS/Tempest merger — looms over the sector. Export demand is strong (Rafale to India/UAE/Greece/Indonesia, Eurofighter to the Gulf, Gripen to Brazil).</p>
+<h3 id="key-programs-and-figures">Key Programs and Figures</h3>
+<p>Fighters: <strong>Eurofighter Typhoon</strong> (the largest European collaboration), <strong>Rafale</strong> (Dassault; &gt;200 built; major exports), <strong>Gripen</strong> (Saab; cost-effective open architecture). Next-gen: <strong>FCAS</strong> (FR/DE/ES, ~€300bn lifecycle, ISD ~2040) and <strong>Tempest/GCAP</strong> (UK/IT/JP, ISD ~2035). Land: <strong>MGCS</strong> (Franco-German tank, mid-2030s). Budgets: UK 2.25% of GDP by 2025; France ~€413bn FY24–30; Germany €100bn special fund; Italy 2% by 2028. BAE FY22 mix: 97% defense, with sales ~44% US / 20% UK / 11% Saudi Arabia.</p>
+<h3 id="glossary_9">Glossary</h3>
+<ul>
+<li><strong>Golden share:</strong> a government special share granting veto over strategic decisions or change of control.</li>
+<li><strong>FOCI:</strong> Foreign Ownership, Control or Influence — US rules restricting foreign access to sensitive programs.</li>
+<li><strong>Special Security Agreement (SSA):</strong> the governance structure letting a foreign-owned US subsidiary work on classified US contracts.</li>
+<li><strong>NATO 2% guideline:</strong> the alliance target to spend ≥2% of GDP on defense.</li>
+<li><strong>National champion:</strong> the dominant (often partly state-owned) defense firm in a given country.</li>
+<li><strong>FCAS / Tempest / GCAP:</strong> Future Combat Air System (FR/DE/ES) / UK-led next-gen fighter / Global Combat Air Programme (Tempest merged with Japan's F-X).</li>
+<li><strong>MGCS / KNDS / KMW:</strong> Main Ground Combat System (FR/DE tank) / the Nexter+KMW land JV / Krauss-Maffei Wegmann.</li>
+<li><strong>MBDA:</strong> the European missiles joint venture (BAE/Airbus/Leonardo).</li>
+<li><strong>EADS:</strong> Airbus Group's former name (rebranded Airbus in 2014).</li>
+<li><strong>MRTT:</strong> Multi-Role Tanker Transport (the Airbus A330 tanker).</li>
+<li><strong>SIPRI:</strong> Stockholm International Peace Research Institute — the standard defense-spending data source.</li>
+<li><strong>EDF / PESCO:</strong> the EU's European Defence Fund / Permanent Structured Cooperation — common EU-defense cooperation frameworks (note: most European defense funding still flows through <em>national</em> budgets and NATO targets rather than these EU vehicles).</li>
+</ul>
+<hr />
+<h2 id="appendix-cross-sector-quick-reference-glossary">Appendix — Cross-Sector Quick-Reference Glossary</h2>
+<p>For convenience, the terms a generalist will meet most often across the whole primer:</p>
+<ul>
+<li><strong>Prime / subcontractor / Tier-2 supplier:</strong> lead system integrator / a company supplying the prime / a smaller component/subsystem supplier.</li>
+<li><strong>DoD / DIB:</strong> Department of Defense / Defense Industrial Base.</li>
+<li><strong>Platform:</strong> a major vehicle/vessel (aircraft, ship, satellite, armored vehicle) carrying sensors and weapons.</li>
+<li><strong>Backlog / book-to-bill:</strong> the contracted revenue pipeline / new orders relative to revenue billed.</li>
+<li><strong>Budget Authority / Outlays:</strong> authority to commit funds (leading indicator) / actual cash spent (lagging).</li>
+<li><strong>Procurement / RDT&amp;E / O&amp;M:</strong> the three budget accounts investors watch most (equipment buys / R&amp;D / operations).</li>
+<li><strong>FFP vs. cost-plus:</strong> fixed-price (higher risk/reward) vs. cost-reimbursable (lower risk) contracts.</li>
+<li><strong>Percentage-of-completion:</strong> the accounting method behind the sector's signature earnings risk.</li>
+<li><strong>EV/EBITDA, DCF, FCF:</strong> the cash-based valuation tools BofA favors for defense.</li>
+<li><strong>Great Power Competition:</strong> the strategic frame (China = "pacing challenge," Russia = "acute threat") driving the current up-cycle.</li>
+<li><strong>Nuclear triad:</strong> land (ICBM), air (bomber), sea (SSBN) deterrence — a top modernization priority.</li>
+<li><strong>C4ISR / ISR / EW:</strong> the electronics backbone (command, control, comms, computers + intelligence/surveillance/reconnaissance) / sensing &amp; recon / electronic warfare.</li>
+<li><strong>FMS:</strong> Foreign Military Sales — the government-administered export channel.</li>
+<li><strong>NATO 2% / golden share / FOCI:</strong> the alliance spending target / European state-veto shares / US foreign-ownership controls (Part 10).</li>
+</ul>
+<hr />
+<p><em>Prepared from Bank of America Global Research, "Defense Update: Deciphering Defense, an Industry Primer," 28 June 2023. Figures reflect the report's 2023 vintage and should be refreshed against current budgets and filings before use in live analysis.</em></p>
+</div>
+<a href="#topanchor" id="top" aria-label="Back to top">&#8593;</a>
+</body>
+</html>
