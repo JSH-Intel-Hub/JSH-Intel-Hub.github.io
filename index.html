@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Research Queue Dashboard</title>
-
 <style>
 :root {
   --bg: #0f172a;
@@ -126,79 +127,63 @@ body {
 }
 </style>
 </head>
-
 <body>
 <div class="dashboard">
-  <header class="header">
-    <h1>Research Queue</h1>
-    <p>Personal investment memo tracker and institutional research archive.</p>
-  </header>
-
-  <aside class="sidebar-queue">
-
-    <section class="section">
-      <h2 class="section-title">Aerospace &amp; Defense</h2>
-
-      <!-- REPORT ROW 1: Bank of America Defense Summary -->
-      <article class="report-row">
-        <div class="row-top">
-          <input class="review-checkbox" type="checkbox" data-id="2026-06-06-bofa-defense-primer" />
-          <a
-            class="report-link"
-            href="aerospace-defense/2026.06.06 - BofA_Defense_Primer_Summary.html"
-            target="_blank"
-          >
+<header class="header">
+<h1>Research Queue</h1>
+<p>Personal investment memo tracker and institutional research archive.</p>
+</header>
+<aside class="sidebar-queue">
+<section class="section">
+<h2 class="section-title">Investing Philosophy</h2>
+<!-- REPORT ROW: Investment North Stars Guide -->
+<article class="report-row">
+<div class="row-top">
+<input class="review-checkbox" data-id="2026-06-07-investing-philosophy-north-star-v1" type="checkbox"/>
+<a class="report-link" href="investing-philosophy/2026.06.07 - Investing Philosophy North Star_v1.html" target="_blank">
+        2026.06.07 - Investing Philosophy North Star_v1.html
+      </a>
+</div>
+<ul class="takeaways">
+<li>Defines three durable investment north stars: structural business quality, value-creating growth, and underwritable returns with downside protection.</li>
+<li>Translates each principle into practical metrics, diligence questions, real-company examples, red flags, and investment committee language.</li>
+<li>Serves as a repeatable private equity operating system for screening opportunities, forming judgment, and avoiding common underwriting traps.</li>
+</ul>
+</article>
+</section><section class="section">
+<h2 class="section-title">Aerospace &amp; Defense</h2>
+<!-- REPORT ROW 1: Bank of America Defense Summary -->
+<article class="report-row">
+<div class="row-top">
+<input class="review-checkbox" data-id="2026-06-06-bofa-defense-primer" type="checkbox"/>
+<a class="report-link" href="aerospace-defense/2026.06.06 - BofA_Defense_Primer_Summary.html" target="_blank">
             2026.06.06 - BofA_Defense_Primer_Summary.html
           </a>
-        </div>
-        <ul class="takeaways">
-          <li>Frames defense demand through modernization, geopolitical urgency, and budget durability.</li>
-          <li>Highlights primes, suppliers, and mission-critical platforms across major A&amp;D categories.</li>
-          <li>Useful baseline for evaluating public comps, sector themes, and diligence questions.</li>
-        </ul>
-      </article>
-
-      <!-- REPORT ROW 2: ChatGPT Deep Research Industrial Base Analysis -->
-      <article class="report-row">
-        <div class="row-top">
-          <input class="review-checkbox" type="checkbox" data-id="2026-06-07-ad-chatgpt-deep-research" />
-          <a
-            class="report-link"
-            href="aerospace-defense/2026.06.07 - A&amp;D ChatGPT Deep Research.html"
-            target="_blank"
-          >
+</div>
+<ul class="takeaways">
+<li>Frames defense demand through modernization, geopolitical urgency, and budget durability.</li>
+<li>Highlights primes, suppliers, and mission-critical platforms across major A&amp;D categories.</li>
+<li>Useful baseline for evaluating public comps, sector themes, and diligence questions.</li>
+</ul>
+</article>
+<!-- REPORT ROW 2: ChatGPT Deep Research Industrial Base Analysis -->
+<article class="report-row">
+<div class="row-top">
+<input class="review-checkbox" data-id="2026-06-07-ad-chatgpt-deep-research" type="checkbox"/>
+<a class="report-link" href="aerospace-defense/2026.06.07 - A&amp;D ChatGPT Deep Research.html" target="_blank">
             2026.06.07 - A&amp;D ChatGPT Deep Research.html
           </a>
-        </div>
-        <ul class="takeaways">
-          <li>Detailed operational and value chain breakdown across primary supplier tier structures[cite: 10].</li>
-          <li>Maps private equity investment frameworks for middle-market and large-cap buyout strategies[cite: 10].</li>
-          <li>Highlights emerging tech innovations, DPA funding allocations, and critical risk parameters[cite: 10].</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Healthcare IT</h2>
-
-      <article class="report-row">
-        <div class="row-top">
-          <input class="review-checkbox" type="checkbox" data-id="rcm-ai-workflow-review" />
-          <a class="report-link" href="#" target="_blank">
-            RCM AI Workflow Review
-          </a>
-        </div>
-        <ul class="takeaways">
-          <li>Focuses on claims automation, denial prevention, and labor replacement opportunities[cite: 6].</li>
-          <li>Strong fit for workflow-native AI and data feedback loop analysis[cite: 6].</li>
-          <li>Requires deeper review of ROI proof points and implementation friction[cite: 6].</li>
-        </ul>
-      </article>
-    </section>
-
-  </aside>
 </div>
+<ul class="takeaways">
+<li>Detailed operational and value chain breakdown across primary supplier tier structures[cite: 10].</li>
+<li>Maps private equity investment frameworks for middle-market and large-cap buyout strategies[cite: 10].</li>
+<li>Highlights emerging tech innovations, DPA funding allocations, and critical risk parameters[cite: 10].</li>
+</ul>
+</article>
+</section>
 
+</aside>
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const checkboxes = document.querySelectorAll(".review-checkbox");
